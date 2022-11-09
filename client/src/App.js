@@ -14,7 +14,7 @@ const App = () => {
         height: "100vh"
       }}
     >
-      👀
+      test 👀
     </Box>
   )
 }
