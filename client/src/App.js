@@ -1,22 +1,24 @@
+import { React, useState } from "react"
+import TextField from "@mui/material/TextField"
+import List from "./components/List"
 import "./App.css"
-import React from "react"
-import { Box } from "@mui/material/"
 
-const App = () => {
+
+function App() {
   return (
-    <Box
-      sx={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        flexDirection: "column",
-        gap: "25px",
-        height: "100vh"
-      }}
-    >
-      👀
-    </Box>
-  )
+    <div className="main">
+      <h1>SearchBar</h1>
+      <div className="search">
+        <TextField
+          id="outlined-basic"
+          variant="outlined"
+          fullWidth
+          label="Search"
+        />
+      </div>
+      <List />
+    </div>
+  );
 }
 
-export default App
+export default App;
