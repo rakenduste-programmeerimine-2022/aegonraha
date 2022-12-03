@@ -13,9 +13,18 @@ import Tooltip from "@mui/material/Tooltip"
 import MenuItem from "@mui/material/MenuItem"
 import AdbIcon from "@mui/icons-material/Adb"
 import { Link } from "react-router-dom"
+import { InputBase, styled } from "@mui/material"
 
-const pages = ["Tooted", "Lemmikud", "Registreeri"]
-const settings = ["Profiil", "Logi välja"]
+const pages = ["Tooted", "Lemmikud"]
+const settings = ["Profiil"]
+
+const Search = styled("div")(({ theme }) => ({
+  backgroundColor: "white",
+  padding: "0 10px",
+  margin: "0 10px",
+  borderRadius: theme.shape.borderRadius,
+  width: "40%"
+}))
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null)
@@ -141,14 +150,18 @@ function ResponsiveAppBar() {
             ))}
           </Box>
 
+          <Search>
+            <InputBase placeholder="Otsi toodet..." />
+          </Search>
+
           <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
+            <Tooltip title="ava menüü">
               <IconButton
                 onClick={handleOpenUserMenu}
                 sx={{ p: 0 }}
               >
                 <Avatar
-                  alt="Remy Sharp"
+                  alt="kasutaja"
                   src="/static/images/avatar/2.jpg"
                 />
               </IconButton>
