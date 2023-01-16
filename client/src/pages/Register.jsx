@@ -8,7 +8,7 @@ import {
 } from "@mui/material"
 import React from "react"
 
-const Registreeri = () => {
+const Register = () => {
   const paperStyle = { padding: " 30px 20px", width: 400, margin: "20px auto" }
   const headerStyle = { margin: 10 }
   return (
@@ -19,52 +19,52 @@ const Registreeri = () => {
       >
         <Grid align="center">
           <Avatar></Avatar>
-          <h2 style={headerStyle}>Registreeri</h2>
-          <Typography variant="caption">Lisa oma andmed</Typography>
+          <h2 style={headerStyle}>Register</h2>
+          <Typography variant="caption">Add your information</Typography>
         </Grid>
         <form>
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Eesnimi"
-            placeholder="Sisesta oma eesnimi"
+            placeholder="Your first name:"
           />
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Perekonnanimi"
-            placeholder="Sisesta oma perekonnanimi"
+            placeholder="Your last name:"
           />
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Kasutajanimi"
-            placeholder="Sisesta oma kasutajanimi"
+            placeholder="Your account name"
           />
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Email"
-            placeholder="Sisesta oma email"
+            placeholder="Your email:"
           />
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Parool"
-            placeholder="Sisesta parool"
+            placeholder="Your password"
           />
           <TextField
             style={{ margin: 10 }}
             fullWidth
             label="Kinnita parool"
-            placeholder="Kinnita valitud parool"
+            placeholder="Validate password"
           />
           <Button
             type="submit"
             variant="contained"
             color="success"
           >
-            Kinnita
+            Submit
           </Button>
         </form>
       </Paper>
@@ -72,4 +72,4 @@ const Registreeri = () => {
   )
 }
 
-export default Registreeri
+export default Register
