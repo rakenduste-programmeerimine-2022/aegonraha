@@ -18,7 +18,7 @@ const sxStyle = {
 
 const loginStyle = { padding: " 20px 20px", width: 350, margin: "30px auto" }
 
-const Kodu = () => {
+const Login = () => {
   return (
     <>
       <CssBaseline />
@@ -34,7 +34,7 @@ const Kodu = () => {
               color="textPrimary"
               gutterBottom
             >
-              Liitu Aeg on Raha keskkonnaga!
+              Join AegOnraha community!
             </Typography>
             <Typography
               variant="h5"
@@ -42,9 +42,8 @@ const Kodu = () => {
               color="textSecondary"
               paragraph
             >
-              Leia huvitavaid tooteid, võrdle hindu, lisa oma profiili alla
-              lemmiktooteid. Kõigi funktsionaalsuste kasutamiseks registreeri
-              kasutaja ning logi sisse
+              Find products with best prices. Compare prices and availability!
+              Add products to favorites and more.
             </Typography>
             <Paper
               elevation={10}
@@ -54,12 +53,12 @@ const Kodu = () => {
                 <TextField
                   style={{ margin: 10 }}
                   label="Kasutanimi"
-                  placeholder="Sisesta kasutajanimi"
+                  placeholder="Enter your username"
                 ></TextField>
                 <TextField
                   style={{ margin: 10 }}
                   label="Parool"
-                  placeholder="Sisesta parool"
+                  placeholder="Enter your password"
                 ></TextField>
                 <Link
                   to="/"
@@ -70,20 +69,20 @@ const Kodu = () => {
                     variant="contained"
                     color="success"
                   >
-                    Logi sisse
+                    Log in
                   </Button>
                 </Link>
               </form>
             </Paper>
             <Link
-              to="/registreeri"
+              to="/register"
               style={{ textDecoration: "none" }}
             >
               <Button
                 variant="outlined"
                 color="primary"
               >
-                Registreeri
+                Register here
               </Button>
             </Link>
           </Container>
@@ -93,4 +92,4 @@ const Kodu = () => {
   )
 }
 
-export default Kodu
+export default Login

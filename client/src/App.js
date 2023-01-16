@@ -1,46 +1,60 @@
-import { Route, Routes } from "react-router-dom"
-import { React, useState } from "react"
-import ResponsiveAppBar from "./components/Nav"
-import Kodu from "./pages/Kodu"
-import Lemmikud from "./pages/Lemmikud"
-import Tooted from "./pages/Tooted"
-import Registreeri from "./pages/Registreeri"
-// import TextField from "@mui/material/TextField"
-// import List from "./components/List"
-import "./App.css"
+import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
+
+import Navbar from "./components/Navbar"
+import Footer from "./components/Footer"
+import Home from "./pages/Home"
+import Products from "./pages/Products"
+import Product from "./pages/Product"
+import Contact from "./pages/Contact"
+import Register from "./pages/Register"
+
+const Layout = () => {
+  return (
+    <div className="app">
+      <Navbar />
+      <Outlet />
+      <Footer />
+    </div>
+  )
+}
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Layout />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
+      },
+      {
+        path: "/products/:id",
+        element: <Products />
+      },
+      {
+        path: "/product/:id",
+        element: <Product />
+      },
+      {
+        path: "/favourites",
+        element: <Product />
+      },
+      {
+        path: "/contact",
+        element: <Contact />
+      },
+      {
+        path: "/register",
+        element: <Register />
+      }
+    ]
+  }
+])
 
 function App() {
   return (
-    <div className="App">
-      <ResponsiveAppBar />
-      <Routes>
-        <Route
-          path="/"
-          element={<Kodu />}
-        />
-        <Route
-          path="/tooted"
-          element={<Tooted />}
-        />
-        <Route
-          path="/lemmikud"
-          element={<Lemmikud />}
-        />
-        <Route
-          path="/registreeri"
-          element={<Registreeri />}
-        />
-      </Routes>
-      {/* <h1>SearchBar</h1> */}
-      {/* <div className="search">
-        <TextField
-          id="outlined-basic"
-          variant="outlined"
-          fullWidth
-          label="Search"
-        />
-      </div> */}
-      {/* <List /> */}
+    <div>
+      <RouterProvider router={router} />
     </div>
   )
 }
