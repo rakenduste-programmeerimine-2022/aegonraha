@@ -1,4 +1,4 @@
-import { Mail, Notifications, Pets } from "@mui/icons-material"
+import { Mail, Notifications, Savings } from "@mui/icons-material"
 import {
   AppBar,
   Avatar,
@@ -55,11 +55,11 @@ const Navbar = () => {
         <Link to="/">
           <Typography
             variant="h6"
-            sx={{ display: { xs: "none", sm: "block" } }}
+            sx={{ display: { xs: "none", sm: "block", color: "white" } }}
           >
             Shop
           </Typography>
-          <Pets sx={{ display: { xs: "block", sm: "none" } }} />
+          <Savings sx={{ display: { xs: "block", sm: "none" } }} />
         </Link>
         <Stack
           spacing={1}
