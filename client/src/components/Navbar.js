@@ -13,6 +13,7 @@ import {
   Toolbar,
   Typography
 } from "@mui/material"
+
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 
@@ -55,7 +56,14 @@ const Navbar = () => {
         <Link to="/">
           <Typography
             variant="h6"
-            sx={{ display: { xs: "none", sm: "block", color: "white" } }}
+            sx={{
+              display: {
+                xs: "none",
+                sm: "block",
+                color: "white",
+                textDecoration: "none"
+              }
+            }}
           >
             Shop
           </Typography>
@@ -65,14 +73,8 @@ const Navbar = () => {
           spacing={1}
           direction="row"
         >
-          <Link to="products/:id">
-            <Button variant="secondary">Products</Button>
-          </Link>
-          <Link to="favourites">
-            <Button variant="secondary">Favorites</Button>
-          </Link>
-          <Link to="contact">
-            <Button variant="secondary">Contact</Button>
+          <Link to="viewproducts/">
+            <Button variant="contained">Products</Button>
           </Link>
         </Stack>
         <Search>

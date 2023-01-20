@@ -22,7 +22,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton
               component="a"
-              href="#home"
+              href="viewproducts"
             >
               <ListItemIcon>
                 <Home />
@@ -33,7 +33,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton
               component="a"
-              href="#home"
+              href="viewproducts"
             >
               <ListItemIcon>
                 <Home />
@@ -44,7 +44,7 @@ const Sidebar = () => {
           <ListItem disablePadding>
             <ListItemButton
               component="a"
-              href="#home"
+              href="viewproducts"
             >
               <ListItemIcon>
                 <Home />
