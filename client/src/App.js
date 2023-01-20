@@ -1,11 +1,10 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom"
 
 import Navbar from "./components/Navbar"
-import Footer from "./components/Footer"
+// import Footer from "./components/Footer"
 import Home from "./pages/Home"
-import Products from "./pages/Products"
-import Product from "./pages/Product"
-import Contact from "./pages/Contact"
+import ViewProducts from "./pages/ViewProducts"
+// import Contact from "./pages/Contact"
 import Register from "./pages/Register"
 
 const Layout = () => {
@@ -13,7 +12,7 @@ const Layout = () => {
     <div className="app">
       <Navbar />
       <Outlet />
-      <Footer />
+      {/* <Footer /> */}
     </div>
   )
 }
@@ -28,21 +27,13 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: "/products/:id",
-        element: <Products />
+        path: "/viewproducts/",
+        element: <ViewProducts />
       },
-      {
-        path: "/product/:id",
-        element: <Product />
-      },
-      {
-        path: "/favourites",
-        element: <Product />
-      },
-      {
-        path: "/contact",
-        element: <Contact />
-      },
+      // {
+      //   path: "/contact",
+      //   element: <Contact />
+      // },
       {
         path: "/register",
         element: <Register />
